@@ -1,5 +1,7 @@
 package com.example.pokemonbueno;
 
+import javafx.scene.image.Image;
+
 import java.io.File;
 
 public class Pokemon {
@@ -8,9 +10,9 @@ public class Pokemon {
     int nivel;
     int vida;
     int vidaRestante;
-    File imagen;
+    Image imagen;
 
-    public Pokemon(String nombre, int nivel, int vida, int vidaRestante, File imagen) {
+    public Pokemon(String nombre, int nivel, int vida, int vidaRestante, Image imagen) {
         this.nombre = nombre;
         this.nivel = nivel;
         this.vida = vida;
