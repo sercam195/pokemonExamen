@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="340.0" prefWidth="621.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pokemonbueno.CombatePokemon">
+
+
+    <ImageView fx:id="fondo" fitHeight="421.0" fitWidth="621.0" pickOnBounds="true" preserveRatio="true">
+    </ImageView>
+    <ImageView fx:id="pokemonAliado" fitHeight="150.0" fitWidth="200.0" layoutX="73.0" layoutY="187.0" pickOnBounds="true" preserveRatio="true" />
+    <ImageView fx:id="pokemonEnemigo" fitHeight="161.0" fitWidth="200.0" layoutX="369.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true" />
+    <BorderPane layoutX="352.0" layoutY="250.0" prefHeight="50.0" prefWidth="255.0" style="-fx-background-color: gainsboro; -fx-border-color: black; -fx-border-width: 2;">
+        <bottom>
+            <HBox BorderPane.alignment="CENTER">
+                <Label fx:id="vidaNumPokemon" text="Label" />
+                <ProgressBar fx:id="vidaPokemon" prefWidth="200.0" progress="1.0" style="-fx-accent: #20ee31; -fx-control-inner-background: transparent; -fx-text-box-border: transparent;">
+                    <HBox.margin>
+                        <Insets left="10.0" />
+                    </HBox.margin>
+                </ProgressBar>
+            </HBox>
+        </bottom>
+        <right>
+            <Label fx:id="nivelPokemon" text="Label" BorderPane.alignment="CENTER">
+                <BorderPane.margin>
+                    <Insets right="20.0" />
+                </BorderPane.margin>
+            </Label>
+        </right>
+        <left>
+            <Label fx:id="nombrePokemon" text="Label" BorderPane.alignment="CENTER">
+                <BorderPane.margin>
+                    <Insets left="20.0" />
+                </BorderPane.margin>
+            </Label>
+        </left>
+    </BorderPane>
+    <BorderPane layoutX="97.0" layoutY="14.0" prefHeight="50.0" prefWidth="255.0" style="-fx-background-color: gainsboro; -fx-border-color: black; -fx-border-width: 2;">
+        <right>
+            <Label fx:id="nivelEnemy" text="Label" BorderPane.alignment="CENTER">
+                <BorderPane.margin>
+                    <Insets right="20.0" />
+                </BorderPane.margin>
+            </Label>
+        </right>
+        <left>
+            <Label fx:id="nombreEnemy" text="Label" BorderPane.alignment="CENTER">
+                <BorderPane.margin>
+                    <Insets left="20.0" />
+                </BorderPane.margin>
+            </Label>
+        </left>
+        <bottom>
+            <HBox BorderPane.alignment="CENTER">
+                <Label fx:id="vidaNumEnemy" text="Label" />
+                <ProgressBar fx:id="vidaEnemy" prefWidth="200.0" progress="1.0" style="-fx-accent: #20ee31; -fx-control-inner-background: transparent; -fx-text-box-border: transparent;">
+                    <HBox.margin>
+                        <Insets left="10.0" />
+                    </HBox.margin>
+                </ProgressBar>
+            </HBox>
+        </bottom>
+    </BorderPane>
+    <BorderPane layoutX="413.0" layoutY="308.0" prefHeight="42.0" prefWidth="194.0" style="-fx-background-color: gainsboro; -fx-border-color: black; -fx-border-width: 2;">
+        <left>
+            <Label fx:id="atacar" onMouseClicked="#atacar" text="ATACAR" BorderPane.alignment="CENTER">
+                <BorderPane.margin>
+                    <Insets left="15.0" />
+                </BorderPane.margin>
+            </Label>
+        </left>
+        <right>
+            <Label fx:id="curar" text="CURAR" BorderPane.alignment="CENTER">
+                <BorderPane.margin>
+                    <Insets right="15.0" />
+                </BorderPane.margin>
+            </Label>
+        </right>
+    </BorderPane>
+    <BorderPane fx:id="ataques" layoutX="27.0" layoutY="263.0" prefHeight="75.0" prefWidth="255.0" style="-fx-background-color: gainsboro; -fx-border-color: black; -fx-border-width: 2;">
+        <left>
+            <Label fx:id="ataqueSeguro" onMouseClicked="#ataqueSeguro" style="-fx-background-color: yellow; -fx-border-color: black; -fx-border-width: 1;" text="ATAQUE SG" BorderPane.alignment="CENTER">
+                <BorderPane.margin>
+                    <Insets left="15.0" />
+                </BorderPane.margin>
+            </Label>
+        </left>
+        <center>
+            <Label style="-fx-background-color: orangered; -fx-border-color: black; -fx-border-width: 1;" text="ATAQUE ARIESGA" BorderPane.alignment="CENTER" />
+        </center>
+        <bottom>
+            <Label style="-fx-background-color: crimson; -fx-border-color: black; -fx-border-width: 1;" text="ATAQUE MUY ARRIESGADO" BorderPane.alignment="CENTER">
+                <BorderPane.margin>
+                    <Insets bottom="10.0" right="15.0" />
+                </BorderPane.margin>
+            </Label>
+        </bottom>
+        <right>
+            <Label fx:id="cancelar" onMouseClicked="#cancelar" text="CANCELAR" BorderPane.alignment="CENTER">
+                <BorderPane.margin>
+                    <Insets />
+                </BorderPane.margin>
+            </Label>
+        </right>
+    </BorderPane>
+    <AnchorPane layoutX="129.0" layoutY="49.0" prefHeight="281.0" prefWidth="362.0" style="-fx-background-color: #f0ead6; -fx-border-color: #2f4f4f; -fx-border-width: 3;" visible="false">
+        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="81.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true" />
+        <Label layoutX="81.0" layoutY="49.0" text="Label" />
+        <Button layoutX="255.0" layoutY="219.0" mnemonicParsing="false" text="SALIR" />
+        <Button layoutX="53.0" layoutY="219.0" mnemonicParsing="false" text="VOLVER A LUCHAR" />
+    </AnchorPane>
+</AnchorPane>

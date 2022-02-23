@@ -27,7 +27,7 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             </rowConstraints>
             <children>
-                <BorderPane fx:id="bpane1" prefHeight="96.0" prefWidth="68.0">
+                <BorderPane fx:id="bpane1" onMouseClicked="#seleccionar1" prefHeight="96.0" prefWidth="68.0">
                     <top>
                         <HBox fx:id="hbox1" prefHeight="19.0" prefWidth="214.0" BorderPane.alignment="CENTER">
                             <children>
@@ -51,7 +51,7 @@
                                     <children>
                                         <ImageView fx:id="imagenps1" fitHeight="27.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                                             <image>
-                                                <Image url="@../../../../../../../../Desktop/POKEMON/a.PNG" />
+                                                <Image url="@../../../../../../../../Desktop/POKEMON/a.png" />
                                             </image>
                                         </ImageView>
                                         <ProgressBar fx:id="vida1" prefHeight="27.0" prefWidth="217.0" progress="0.81" />
@@ -69,7 +69,7 @@
                         <ImageView fx:id="imagen1" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
                     </center>
                 </BorderPane>
-                <BorderPane fx:id="bpane2" prefHeight="96.0" prefWidth="68.0" GridPane.columnIndex="1">
+                <BorderPane fx:id="bpane2" onMouseClicked="#seleccionar2" prefHeight="96.0" prefWidth="68.0" GridPane.columnIndex="1">
                     <top>
                         <HBox fx:id="hbox2" prefHeight="19.0" prefWidth="214.0" BorderPane.alignment="CENTER">
                             <children>
@@ -93,7 +93,7 @@
                                     <children>
                                         <ImageView fx:id="imagenps2" fitHeight="27.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                                             <image>
-                                                <Image url="@../../../../../../../../Desktop/POKEMON/a.PNG" />
+                                                <Image url="@../../../../../../../../Desktop/POKEMON/a.png" />
                                             </image>
                                         </ImageView>
                                         <ProgressBar fx:id="vida2" prefHeight="27.0" prefWidth="217.0" progress="0.81" />
@@ -111,7 +111,7 @@
                         <ImageView fx:id="imagen2" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
                     </center>
                 </BorderPane>
-                <BorderPane fx:id="bpane3" prefHeight="96.0" prefWidth="68.0" GridPane.columnIndex="2">
+                <BorderPane fx:id="bpane3" onMouseClicked="#seleccionar3" prefHeight="96.0" prefWidth="68.0" GridPane.columnIndex="2">
                     <top>
                         <HBox fx:id="hbox3" prefHeight="19.0" prefWidth="214.0" BorderPane.alignment="CENTER">
                             <children>
@@ -135,7 +135,7 @@
                                     <children>
                                         <ImageView fx:id="psimagen3" fitHeight="27.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                                             <image>
-                                                <Image url="@../../../../../../../../Desktop/POKEMON/a.PNG" />
+                                                <Image url="@../../../../../../../../Desktop/POKEMON/a.png" />
                                             </image>
                                         </ImageView>
                                         <ProgressBar fx:id="vida3" prefHeight="27.0" prefWidth="217.0" progress="0.81" />
@@ -153,7 +153,7 @@
                         <ImageView fx:id="imagen3" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
                     </center>
                 </BorderPane>
-                <BorderPane fx:id="bpane4" prefHeight="96.0" prefWidth="68.0" GridPane.rowIndex="1">
+                <BorderPane fx:id="bpane4" onMouseClicked="#seleccionar4" prefHeight="96.0" prefWidth="68.0" GridPane.rowIndex="1">
                     <top>
                         <HBox fx:id="hbox4" prefHeight="19.0" prefWidth="214.0" BorderPane.alignment="CENTER">
                             <children>
@@ -177,7 +177,7 @@
                                     <children>
                                         <ImageView fx:id="psimagen4" fitHeight="27.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                                             <image>
-                                                <Image url="@../../../../../../../../Desktop/POKEMON/a.PNG" />
+                                                <Image url="@../../../../../../../../Desktop/POKEMON/a.png" />
                                             </image>
                                         </ImageView>
                                         <ProgressBar fx:id="vida4" prefHeight="27.0" prefWidth="217.0" progress="0.81" />
@@ -195,7 +195,7 @@
                         <ImageView fx:id="imagen4" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
                     </center>
                 </BorderPane>
-                <BorderPane fx:id="bpane5" prefHeight="96.0" prefWidth="68.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                <BorderPane fx:id="bpane5" onMouseClicked="#seleccionar5" prefHeight="96.0" prefWidth="68.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                     <top>
                         <HBox fx:id="hbox5" prefHeight="19.0" prefWidth="214.0" BorderPane.alignment="CENTER">
                             <children>
@@ -219,7 +219,7 @@
                                     <children>
                                         <ImageView fx:id="psimagen5" fitHeight="27.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                                             <image>
-                                                <Image url="@../../../../../../../../Desktop/POKEMON/a.PNG" />
+                                                <Image url="@../../../../../../../../Desktop/POKEMON/a.png" />
                                             </image>
                                         </ImageView>
                                         <ProgressBar fx:id="vida5" prefHeight="27.0" prefWidth="217.0" progress="0.81" />
@@ -237,7 +237,7 @@
                         <ImageView fx:id="imagen5" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
                     </center>
                 </BorderPane>
-                <BorderPane fx:id="bpane6" prefHeight="96.0" prefWidth="68.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                <BorderPane fx:id="bpane6" onMouseClicked="#seleccionar6" prefHeight="96.0" prefWidth="68.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
                     <top>
                         <HBox fx:id="hbox6" prefHeight="19.0" prefWidth="214.0" BorderPane.alignment="CENTER">
                             <children>
@@ -261,7 +261,7 @@
                                     <children>
                                         <ImageView fx:id="psimagen6" fitHeight="27.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                                             <image>
-                                                <Image url="@../../../../../../../../Desktop/POKEMON/a.PNG" />
+                                                <Image url="@../../../../../../../../Desktop/POKEMON/a.png" />
                                             </image>
                                         </ImageView>
                                         <ProgressBar fx:id="vida6" prefHeight="27.0" prefWidth="217.0" progress="0.81" />
@@ -282,6 +282,6 @@
             </children>
         </GridPane>
         <Button fx:id="elegirpokemon" layoutX="98.0" layoutY="442.0" mnemonicParsing="false" text="ELEGIR POKEMON" />
-        <Button fx:id="continuar" layoutX="510.0" layoutY="442.0" mnemonicParsing="false" text="CONTINUAR" />
+        <Button fx:id="continuar" layoutX="510.0" layoutY="442.0" mnemonicParsing="false" onMouseClicked="#cambiarDePantalla" text="CONTINUAR" />
     </children>
 </AnchorPane>
