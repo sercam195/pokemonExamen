@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #1A62D1;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pokemonbueno.Graficas">
+   <children>
+      <BorderPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #1A62D1;">
+         <center>
+            <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="550.0" style="-fx-background-color: #38D1F0;" BorderPane.alignment="CENTER">
+               <right>
+                  <BarChart fx:id="barras" horizontalGridLinesVisible="false" prefHeight="350.0" prefWidth="283.0" verticalGridLinesVisible="false" BorderPane.alignment="CENTER">
+                     <xAxis>
+                        <CategoryAxis side="BOTTOM" fx:id="x" />
+                     </xAxis>
+                     <yAxis>
+                        <NumberAxis fx:id="y" side="LEFT" />
+                     </yAxis>
+                  </BarChart>
+               </right>
+               <left>
+                  <VBox prefHeight="350.0" prefWidth="260.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Label fx:id="poke" text="Label">
+                           <VBox.margin>
+                              <Insets left="80.0" top="20.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <PieChart fx:id="pieChart" prefWidth="135.0">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin></PieChart>
+                     </children>
+                  </VBox>
+               </left>
+            </BorderPane>
+         </center>
+      </BorderPane>
+      <Button fx:id="volver" layoutX="55.0" layoutY="387.0" mnemonicParsing="false" onMouseClicked="#volver" text="VOLVER" />
+   </children>
+</AnchorPane>

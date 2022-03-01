@@ -13,35 +13,49 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="apane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="472.0" prefWidth="738.0" style="-fx-background-color: #c0b595;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pokemonbueno.HelloController">
+<AnchorPane fx:id="apane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="472.0" prefWidth="738.0" style="-fx-background-color: #1A62D1;"
+            xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.pokemonbueno.HelloController">
     <children>
-        <GridPane fx:id="gpane" layoutX="-5.0" layoutY="22.0" prefHeight="418.0" prefWidth="745.0" style="-fx-background-color: #f1e3bb;">
+        <GridPane fx:id="gpane" layoutX="-5.0" layoutY="22.0" prefHeight="418.0" prefWidth="745.0"
+                  style="-fx-background-color: #38D1F0;">
             <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
             </columnConstraints>
             <rowConstraints>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
             </rowConstraints>
             <children>
-                <BorderPane fx:id="bpane1" onMouseClicked="#seleccionar1" prefHeight="96.0" prefWidth="68.0">
+                <BorderPane onMouseClicked="#seleccionar1" prefHeight="96.0" prefWidth="68.0">
                     <top>
                         <HBox fx:id="hbox1" prefHeight="19.0" prefWidth="214.0" BorderPane.alignment="CENTER">
                             <children>
                                 <Label fx:id="name1" text="Pokemon">
                                     <HBox.margin>
-                                        <Insets left="20.0" />
+                                        <Insets left="20.0"/>
                                     </HBox.margin>
+                                    <font>
+                                        <Font name="System Bold" size="14.0"/>
+                                    </font>
                                 </Label>
                                 <Label fx:id="nivel1" text="Nivel">
                                     <HBox.margin>
-                                        <Insets left="80.0" />
+                                        <Insets left="110.0"/>
                                     </HBox.margin>
+                                    <font>
+                                        <Font size="14.0"/>
+                                    </font>
                                 </Label>
                             </children>
+                            <BorderPane.margin>
+                                <Insets top="10.0"/>
+                            </BorderPane.margin>
                         </HBox>
                     </top>
                     <bottom>
@@ -49,41 +63,67 @@
                             <children>
                                 <HBox fx:id="vhbox1" prefHeight="14.0" prefWidth="196.0">
                                     <children>
-                                        <ImageView fx:id="imagenps1" fitHeight="27.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                                            <image>
-                                                <Image url="@../../../../../../../../Desktop/POKEMON/a.png" />
-                                            </image>
-                                        </ImageView>
-                                        <ProgressBar fx:id="vida1" prefHeight="27.0" prefWidth="217.0" progress="0.81" />
+                                        <ImageView fx:id="imagenps1" fitHeight="27.0" fitWidth="25.0"
+                                                   pickOnBounds="true" preserveRatio="true"/>
+                                        <ProgressBar fx:id="vida1" prefHeight="27.0" prefWidth="217.0" progress="0.81"
+                                                     style="-fx-accent: #20ee31; -fx-control-inner-background: transparent; -fx-text-box-border: transparent;"/>
                                     </children>
                                 </HBox>
                                 <Label fx:id="ps1" text="PS">
                                     <VBox.margin>
-                                        <Insets left="50.0" />
+                                        <Insets left="50.0"/>
                                     </VBox.margin>
                                 </Label>
                             </children>
                         </VBox>
                     </bottom>
                     <center>
-                        <ImageView fx:id="imagen1" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+                        <BorderPane fx:id="bpane1" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                                    minWidth="-Infinity" prefHeight="130.0" prefWidth="200.0"
+                                    BorderPane.alignment="CENTER">
+                            <center>
+                                <ImageView fx:id="imagen1" fitHeight="120.0" fitWidth="190.0" pickOnBounds="true"
+                                           preserveRatio="true" BorderPane.alignment="CENTER">
+                                    <image>
+                                        <Image url="@../../../../java/com/example/pokemonbueno/imagenes/Scyther_EpEc.gif"/>
+                                    </image>
+                                </ImageView>
+                            </center>
+                            <bottom>
+                                <ImageView fx:id="sexo1" fitHeight="30.0" fitWidth="102.0" pickOnBounds="true"
+                                           preserveRatio="true" BorderPane.alignment="BOTTOM_RIGHT">
+                                    <image>
+                                        <Image url="@../../../../java/com/example/pokemonbueno/imagenes/masc.png"/>
+                                    </image>
+                                </ImageView>
+                            </bottom>
+                        </BorderPane>
                     </center>
                 </BorderPane>
-                <BorderPane fx:id="bpane2" onMouseClicked="#seleccionar2" prefHeight="96.0" prefWidth="68.0" GridPane.columnIndex="1">
+                <BorderPane onMouseClicked="#seleccionar2" prefHeight="96.0" prefWidth="68.0" GridPane.columnIndex="1">
                     <top>
                         <HBox fx:id="hbox2" prefHeight="19.0" prefWidth="214.0" BorderPane.alignment="CENTER">
                             <children>
                                 <Label fx:id="name2" text="Pokemon">
                                     <HBox.margin>
-                                        <Insets left="20.0" />
+                                        <Insets left="20.0"/>
                                     </HBox.margin>
+                                    <font>
+                                        <Font name="System Bold" size="14.0"/>
+                                    </font>
                                 </Label>
                                 <Label fx:id="nivel2" text="Nivel">
                                     <HBox.margin>
-                                        <Insets left="80.0" />
+                                        <Insets left="110.0"/>
                                     </HBox.margin>
+                                    <font>
+                                        <Font size="14.0"/>
+                                    </font>
                                 </Label>
                             </children>
+                            <BorderPane.margin>
+                                <Insets top="10.0"/>
+                            </BorderPane.margin>
                         </HBox>
                     </top>
                     <bottom>
@@ -91,41 +131,59 @@
                             <children>
                                 <HBox fx:id="vhbox2" prefHeight="14.0" prefWidth="196.0">
                                     <children>
-                                        <ImageView fx:id="imagenps2" fitHeight="27.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                                            <image>
-                                                <Image url="@../../../../../../../../Desktop/POKEMON/a.png" />
-                                            </image>
-                                        </ImageView>
-                                        <ProgressBar fx:id="vida2" prefHeight="27.0" prefWidth="217.0" progress="0.81" />
+                                        <ImageView fx:id="imagenps2" fitHeight="27.0" fitWidth="25.0"
+                                                   pickOnBounds="true" preserveRatio="true"/>
+                                        <ProgressBar fx:id="vida2" prefHeight="27.0" prefWidth="217.0" progress="0.81"
+                                                     style="-fx-accent: #20ee31; -fx-control-inner-background: transparent; -fx-text-box-border: transparent;"/>
                                     </children>
                                 </HBox>
                                 <Label fx:id="ps2" text="PS">
                                     <VBox.margin>
-                                        <Insets left="50.0" />
+                                        <Insets left="50.0"/>
                                     </VBox.margin>
                                 </Label>
                             </children>
                         </VBox>
                     </bottom>
                     <center>
-                        <ImageView fx:id="imagen2" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+                        <BorderPane fx:id="bpane2" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                                    minWidth="-Infinity" prefHeight="130.0" prefWidth="200.0"
+                                    BorderPane.alignment="CENTER">
+                            <center>
+                                <ImageView fx:id="imagen2" fitHeight="120.0" fitWidth="190.0" pickOnBounds="true"
+                                           preserveRatio="true" BorderPane.alignment="CENTER"/>
+                            </center>
+                            <bottom>
+                                <ImageView fx:id="sexo2" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true"
+                                           preserveRatio="true" BorderPane.alignment="BOTTOM_RIGHT"/>
+                            </bottom>
+                        </BorderPane>
                     </center>
                 </BorderPane>
-                <BorderPane fx:id="bpane3" onMouseClicked="#seleccionar3" prefHeight="96.0" prefWidth="68.0" GridPane.columnIndex="2">
+                <BorderPane onMouseClicked="#seleccionar3" prefHeight="96.0" prefWidth="68.0" GridPane.columnIndex="2">
                     <top>
                         <HBox fx:id="hbox3" prefHeight="19.0" prefWidth="214.0" BorderPane.alignment="CENTER">
                             <children>
                                 <Label fx:id="name3" text="Pokemon">
                                     <HBox.margin>
-                                        <Insets left="20.0" />
+                                        <Insets left="20.0"/>
                                     </HBox.margin>
+                                    <font>
+                                        <Font name="System Bold" size="14.0"/>
+                                    </font>
                                 </Label>
                                 <Label fx:id="nivel3" text="Nivel">
                                     <HBox.margin>
-                                        <Insets left="80.0" />
+                                        <Insets left="110.0"/>
                                     </HBox.margin>
+                                    <font>
+                                        <Font size="14.0"/>
+                                    </font>
                                 </Label>
                             </children>
+                            <BorderPane.margin>
+                                <Insets top="10.0"/>
+                            </BorderPane.margin>
                         </HBox>
                     </top>
                     <bottom>
@@ -133,41 +191,59 @@
                             <children>
                                 <HBox fx:id="vhbox3" prefHeight="14.0" prefWidth="196.0">
                                     <children>
-                                        <ImageView fx:id="psimagen3" fitHeight="27.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                                            <image>
-                                                <Image url="@../../../../../../../../Desktop/POKEMON/a.png" />
-                                            </image>
-                                        </ImageView>
-                                        <ProgressBar fx:id="vida3" prefHeight="27.0" prefWidth="217.0" progress="0.81" />
+                                        <ImageView fx:id="psimagen3" fitHeight="27.0" fitWidth="25.0"
+                                                   pickOnBounds="true" preserveRatio="true"/>
+                                        <ProgressBar fx:id="vida3" prefHeight="27.0" prefWidth="217.0" progress="0.81"
+                                                     style="-fx-accent: #20ee31; -fx-control-inner-background: transparent; -fx-text-box-border: transparent;"/>
                                     </children>
                                 </HBox>
                                 <Label fx:id="ps3" text="PS">
                                     <VBox.margin>
-                                        <Insets left="50.0" />
+                                        <Insets left="50.0"/>
                                     </VBox.margin>
                                 </Label>
                             </children>
                         </VBox>
                     </bottom>
                     <center>
-                        <ImageView fx:id="imagen3" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+                        <BorderPane fx:id="bpane3" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                                    minWidth="-Infinity" prefHeight="130.0" prefWidth="200.0"
+                                    BorderPane.alignment="CENTER">
+                            <center>
+                                <ImageView fx:id="imagen3" fitHeight="120.0" fitWidth="190.0" pickOnBounds="true"
+                                           preserveRatio="true" BorderPane.alignment="CENTER"/>
+                            </center>
+                            <bottom>
+                                <ImageView fx:id="sexo3" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true"
+                                           preserveRatio="true" BorderPane.alignment="BOTTOM_RIGHT"/>
+                            </bottom>
+                        </BorderPane>
                     </center>
                 </BorderPane>
-                <BorderPane fx:id="bpane4" onMouseClicked="#seleccionar4" prefHeight="96.0" prefWidth="68.0" GridPane.rowIndex="1">
+                <BorderPane onMouseClicked="#seleccionar4" prefHeight="96.0" prefWidth="68.0" GridPane.rowIndex="1">
                     <top>
                         <HBox fx:id="hbox4" prefHeight="19.0" prefWidth="214.0" BorderPane.alignment="CENTER">
                             <children>
                                 <Label fx:id="name4" text="Pokemon">
                                     <HBox.margin>
-                                        <Insets left="20.0" />
+                                        <Insets left="20.0"/>
                                     </HBox.margin>
+                                    <font>
+                                        <Font name="System Bold" size="14.0"/>
+                                    </font>
                                 </Label>
                                 <Label fx:id="nivel4" text="Nivel">
                                     <HBox.margin>
-                                        <Insets left="80.0" />
+                                        <Insets left="110.0"/>
                                     </HBox.margin>
+                                    <font>
+                                        <Font size="14.0"/>
+                                    </font>
                                 </Label>
                             </children>
+                            <BorderPane.margin>
+                                <Insets top="10.0"/>
+                            </BorderPane.margin>
                         </HBox>
                     </top>
                     <bottom>
@@ -175,41 +251,60 @@
                             <children>
                                 <HBox fx:id="vhbox4" prefHeight="14.0" prefWidth="196.0">
                                     <children>
-                                        <ImageView fx:id="psimagen4" fitHeight="27.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                                            <image>
-                                                <Image url="@../../../../../../../../Desktop/POKEMON/a.png" />
-                                            </image>
-                                        </ImageView>
-                                        <ProgressBar fx:id="vida4" prefHeight="27.0" prefWidth="217.0" progress="0.81" />
+                                        <ImageView fx:id="psimagen4" fitHeight="27.0" fitWidth="25.0"
+                                                   pickOnBounds="true" preserveRatio="true"/>
+                                        <ProgressBar fx:id="vida4" prefHeight="27.0" prefWidth="217.0" progress="0.81"
+                                                     style="-fx-accent: #20ee31; -fx-control-inner-background: transparent; -fx-text-box-border: transparent;"/>
                                     </children>
                                 </HBox>
                                 <Label fx:id="ps4" text="PS">
                                     <VBox.margin>
-                                        <Insets left="50.0" />
+                                        <Insets left="50.0"/>
                                     </VBox.margin>
                                 </Label>
                             </children>
                         </VBox>
                     </bottom>
                     <center>
-                        <ImageView fx:id="imagen4" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+                        <BorderPane fx:id="bpane4" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                                    minWidth="-Infinity" prefHeight="130.0" prefWidth="200.0"
+                                    BorderPane.alignment="CENTER">
+                            <center>
+                                <ImageView fx:id="imagen4" fitHeight="120.0" fitWidth="190.0" pickOnBounds="true"
+                                           preserveRatio="true" BorderPane.alignment="CENTER"/>
+                            </center>
+                            <bottom>
+                                <ImageView fx:id="sexo4" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true"
+                                           preserveRatio="true" BorderPane.alignment="BOTTOM_RIGHT"/>
+                            </bottom>
+                        </BorderPane>
                     </center>
                 </BorderPane>
-                <BorderPane fx:id="bpane5" onMouseClicked="#seleccionar5" prefHeight="96.0" prefWidth="68.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                <BorderPane onMouseClicked="#seleccionar5" prefHeight="96.0" prefWidth="68.0" GridPane.columnIndex="1"
+                            GridPane.rowIndex="1">
                     <top>
                         <HBox fx:id="hbox5" prefHeight="19.0" prefWidth="214.0" BorderPane.alignment="CENTER">
                             <children>
                                 <Label fx:id="name5" text="Pokemon">
                                     <HBox.margin>
-                                        <Insets left="20.0" />
+                                        <Insets left="20.0"/>
                                     </HBox.margin>
+                                    <font>
+                                        <Font name="System Bold" size="14.0"/>
+                                    </font>
                                 </Label>
                                 <Label fx:id="nivel5" text="Nivel">
                                     <HBox.margin>
-                                        <Insets left="80.0" />
+                                        <Insets left="110.0"/>
                                     </HBox.margin>
+                                    <font>
+                                        <Font size="14.0"/>
+                                    </font>
                                 </Label>
                             </children>
+                            <BorderPane.margin>
+                                <Insets top="10.0"/>
+                            </BorderPane.margin>
                         </HBox>
                     </top>
                     <bottom>
@@ -217,41 +312,60 @@
                             <children>
                                 <HBox fx:id="vhbox5" prefHeight="14.0" prefWidth="196.0">
                                     <children>
-                                        <ImageView fx:id="psimagen5" fitHeight="27.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                                            <image>
-                                                <Image url="@../../../../../../../../Desktop/POKEMON/a.png" />
-                                            </image>
-                                        </ImageView>
-                                        <ProgressBar fx:id="vida5" prefHeight="27.0" prefWidth="217.0" progress="0.81" />
+                                        <ImageView fx:id="psimagen5" fitHeight="27.0" fitWidth="25.0"
+                                                   pickOnBounds="true" preserveRatio="true"/>
+                                        <ProgressBar fx:id="vida5" prefHeight="27.0" prefWidth="217.0" progress="0.81"
+                                                     style="-fx-accent: #20ee31; -fx-control-inner-background: transparent; -fx-text-box-border: transparent;"/>
                                     </children>
                                 </HBox>
                                 <Label fx:id="ps5" text="PS">
                                     <VBox.margin>
-                                        <Insets left="50.0" />
+                                        <Insets left="50.0"/>
                                     </VBox.margin>
                                 </Label>
                             </children>
                         </VBox>
                     </bottom>
                     <center>
-                        <ImageView fx:id="imagen5" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+                        <BorderPane fx:id="bpane5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                                    minWidth="-Infinity" prefHeight="130.0" prefWidth="200.0"
+                                    BorderPane.alignment="CENTER">
+                            <center>
+                                <ImageView fx:id="imagen5" fitHeight="120.0" fitWidth="190.0" pickOnBounds="true"
+                                           preserveRatio="true" BorderPane.alignment="CENTER"/>
+                            </center>
+                            <bottom>
+                                <ImageView fx:id="sexo5" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true"
+                                           preserveRatio="true" BorderPane.alignment="BOTTOM_RIGHT"/>
+                            </bottom>
+                        </BorderPane>
                     </center>
                 </BorderPane>
-                <BorderPane fx:id="bpane6" onMouseClicked="#seleccionar6" prefHeight="96.0" prefWidth="68.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                <BorderPane onMouseClicked="#seleccionar6" prefHeight="96.0" prefWidth="68.0" GridPane.columnIndex="2"
+                            GridPane.rowIndex="1">
                     <top>
                         <HBox fx:id="hbox6" prefHeight="19.0" prefWidth="214.0" BorderPane.alignment="CENTER">
                             <children>
                                 <Label fx:id="name6" text="Pokemon">
                                     <HBox.margin>
-                                        <Insets left="20.0" />
+                                        <Insets left="20.0"/>
                                     </HBox.margin>
+                                    <font>
+                                        <Font name="System Bold" size="14.0"/>
+                                    </font>
                                 </Label>
                                 <Label fx:id="nivel6" text="Nivel">
                                     <HBox.margin>
-                                        <Insets left="80.0" />
+                                        <Insets left="110.0"/>
                                     </HBox.margin>
+                                    <font>
+                                        <Font size="14.0"/>
+                                    </font>
                                 </Label>
                             </children>
+                            <BorderPane.margin>
+                                <Insets top="10.0"/>
+                            </BorderPane.margin>
                         </HBox>
                     </top>
                     <bottom>
@@ -259,29 +373,42 @@
                             <children>
                                 <HBox fx:id="vhbox6" prefHeight="14.0" prefWidth="196.0">
                                     <children>
-                                        <ImageView fx:id="psimagen6" fitHeight="27.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                                            <image>
-                                                <Image url="@../../../../../../../../Desktop/POKEMON/a.png" />
-                                            </image>
-                                        </ImageView>
-                                        <ProgressBar fx:id="vida6" prefHeight="27.0" prefWidth="217.0" progress="0.81" />
+                                        <ImageView fx:id="psimagen6" fitHeight="27.0" fitWidth="25.0"
+                                                   pickOnBounds="true" preserveRatio="true"/>
+                                        <ProgressBar fx:id="vida6" prefHeight="27.0" prefWidth="217.0" progress="0.81"
+                                                     style="-fx-accent: #20ee31; -fx-control-inner-background: transparent; -fx-text-box-border: transparent;"/>
                                     </children>
                                 </HBox>
                                 <Label fx:id="ps6" text="PS">
                                     <VBox.margin>
-                                        <Insets left="50.0" />
+                                        <Insets left="50.0"/>
                                     </VBox.margin>
                                 </Label>
                             </children>
                         </VBox>
                     </bottom>
                     <center>
-                        <ImageView fx:id="imagen6" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER" />
+                        <BorderPane fx:id="bpane6" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+                                    minWidth="-Infinity" prefHeight="130.0" prefWidth="200.0"
+                                    BorderPane.alignment="CENTER">
+                            <center>
+                                <ImageView fx:id="imagen6" fitHeight="120.0" fitWidth="190.0" pickOnBounds="true"
+                                           preserveRatio="true" BorderPane.alignment="CENTER"/>
+                            </center>
+                            <bottom>
+                                <ImageView fx:id="sexo6" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true"
+                                           preserveRatio="true" BorderPane.alignment="BOTTOM_RIGHT"/>
+                            </bottom>
+                        </BorderPane>
                     </center>
                 </BorderPane>
             </children>
         </GridPane>
-        <Button fx:id="elegirpokemon" layoutX="98.0" layoutY="442.0" mnemonicParsing="false" text="ELEGIR POKEMON" />
-        <Button fx:id="continuar" layoutX="510.0" layoutY="442.0" mnemonicParsing="false" onMouseClicked="#cambiarDePantalla" text="CONTINUAR" />
+        <Button fx:id="elegirpokemon" layoutX="98.0" layoutY="442.0" mnemonicParsing="false"
+                onMouseClicked="#cambiarDePantalla" text="ELEGIR POKEMON"/>
+        <Button fx:id="continuar" layoutX="510.0" layoutY="442.0" mnemonicParsing="false"
+                onMouseClicked="#mostrarGraficas" text="GRAFICOS"/>
+        <Button fx:id="pokedex" layoutX="336.0" layoutY="442.0" mnemonicParsing="false" onMouseClicked="#pokedex"
+                text="POKEDEX"/>
     </children>
 </AnchorPane>

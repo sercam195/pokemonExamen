@@ -4,21 +4,31 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="340.0" prefWidth="621.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pokemonbueno.CombatePokemon">
+<AnchorPane prefHeight="340.0" prefWidth="621.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.pokemonbueno.CombatePokemon">
 
 
-    <ImageView fx:id="fondo" fitHeight="421.0" fitWidth="621.0" pickOnBounds="true" preserveRatio="true">
+    <ImageView fx:id="fondo" fitHeight="354.0" fitWidth="621.0" pickOnBounds="true" preserveRatio="true">
     </ImageView>
-    <ImageView fx:id="pokemonAliado" fitHeight="150.0" fitWidth="200.0" layoutX="73.0" layoutY="187.0" pickOnBounds="true" preserveRatio="true" />
-    <ImageView fx:id="pokemonEnemigo" fitHeight="161.0" fitWidth="200.0" layoutX="369.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true" />
-    <BorderPane layoutX="352.0" layoutY="250.0" prefHeight="50.0" prefWidth="255.0" style="-fx-background-color: gainsboro; -fx-border-color: black; -fx-border-width: 2;">
+    <ImageView fx:id="pokemonAliado" fitHeight="150.0" fitWidth="200.0" layoutX="73.0" layoutY="187.0"
+               pickOnBounds="true" preserveRatio="true"/>
+    <ImageView fx:id="pokemonEnemigo" fitHeight="161.0" fitWidth="200.0" layoutX="369.0" layoutY="63.0"
+               pickOnBounds="true" preserveRatio="true"/>
+    <BorderPane layoutX="26.0" layoutY="127.0" prefHeight="50.0" prefWidth="255.0"
+                style="-fx-background-color: gainsboro; -fx-border-color: black; -fx-border-width: 2;">
         <bottom>
             <HBox BorderPane.alignment="CENTER">
-                <Label fx:id="vidaNumPokemon" text="Label" />
-                <ProgressBar fx:id="vidaPokemon" prefWidth="200.0" progress="1.0" style="-fx-accent: #20ee31; -fx-control-inner-background: transparent; -fx-text-box-border: transparent;">
+                <Label fx:id="vidaNumPokemon" onMouseEntered="#mouseEntered" onMouseExited="#mouseExited" text="Label">
                     <HBox.margin>
-                        <Insets left="10.0" />
+                        <Insets left="5.0"/>
+                    </HBox.margin>
+                </Label>
+                <ProgressBar fx:id="vidaPokemon" prefWidth="200.0" progress="1.0"
+                             style="-fx-accent: #20ee31; -fx-control-inner-background: transparent; -fx-text-box-border: transparent;">
+                    <HBox.margin>
+                        <Insets bottom="3.0" left="5.0"/>
                     </HBox.margin>
                 </ProgressBar>
             </HBox>
@@ -26,90 +36,168 @@
         <right>
             <Label fx:id="nivelPokemon" text="Label" BorderPane.alignment="CENTER">
                 <BorderPane.margin>
-                    <Insets right="20.0" />
+                    <Insets right="20.0"/>
                 </BorderPane.margin>
             </Label>
         </right>
         <left>
             <Label fx:id="nombrePokemon" text="Label" BorderPane.alignment="CENTER">
                 <BorderPane.margin>
-                    <Insets left="20.0" />
+                    <Insets left="20.0"/>
                 </BorderPane.margin>
+                <font>
+                    <Font name="System Bold" size="12.0"/>
+                </font>
             </Label>
         </left>
     </BorderPane>
-    <BorderPane layoutX="97.0" layoutY="14.0" prefHeight="50.0" prefWidth="255.0" style="-fx-background-color: gainsboro; -fx-border-color: black; -fx-border-width: 2;">
+    <BorderPane layoutX="327.0" layoutY="24.0" prefHeight="50.0" prefWidth="255.0"
+                style="-fx-background-color: gainsboro; -fx-border-color: black; -fx-border-width: 2;">
         <right>
             <Label fx:id="nivelEnemy" text="Label" BorderPane.alignment="CENTER">
                 <BorderPane.margin>
-                    <Insets right="20.0" />
+                    <Insets right="20.0"/>
                 </BorderPane.margin>
             </Label>
         </right>
         <left>
             <Label fx:id="nombreEnemy" text="Label" BorderPane.alignment="CENTER">
                 <BorderPane.margin>
-                    <Insets left="20.0" />
+                    <Insets left="20.0"/>
                 </BorderPane.margin>
+                <font>
+                    <Font name="System Bold" size="12.0"/>
+                </font>
             </Label>
         </left>
         <bottom>
             <HBox BorderPane.alignment="CENTER">
-                <Label fx:id="vidaNumEnemy" text="Label" />
-                <ProgressBar fx:id="vidaEnemy" prefWidth="200.0" progress="1.0" style="-fx-accent: #20ee31; -fx-control-inner-background: transparent; -fx-text-box-border: transparent;">
+                <Label fx:id="vidaNumEnemy" onMouseEntered="#mouseEnteredEnemy" onMouseExited="#mouseExitedEnemy"
+                       text="Label">
                     <HBox.margin>
-                        <Insets left="10.0" />
+                        <Insets left="5.0"/>
+                    </HBox.margin>
+                </Label>
+                <ProgressBar fx:id="vidaEnemy" prefWidth="200.0" progress="1.0"
+                             style="-fx-accent: #20ee31; -fx-control-inner-background: transparent; -fx-text-box-border: transparent;">
+                    <HBox.margin>
+                        <Insets bottom="3.0" left="5.0"/>
                     </HBox.margin>
                 </ProgressBar>
             </HBox>
         </bottom>
     </BorderPane>
-    <BorderPane layoutX="413.0" layoutY="308.0" prefHeight="42.0" prefWidth="194.0" style="-fx-background-color: gainsboro; -fx-border-color: black; -fx-border-width: 2;">
+    <BorderPane fx:id="menu" layoutX="414.0" layoutY="250.0" prefHeight="97.0" prefWidth="200.0"
+                style="-fx-background-color: #38D1F0; -fx-border-color: #1A62D1; -fx-border-width: 8;">
         <left>
-            <Label fx:id="atacar" onMouseClicked="#atacar" text="ATACAR" BorderPane.alignment="CENTER">
+            <Label fx:id="atacar" onMouseClicked="#atacar" onMouseEntered="#pulsarAtacar"
+                   onMouseExited="#despulsarAtacar"
+                   style="-fx-background-color: red; -fx-border-color: black; -fx-border-width: 1;" text="ATACAR"
+                   BorderPane.alignment="CENTER">
                 <BorderPane.margin>
-                    <Insets left="15.0" />
+                    <Insets left="15.0"/>
                 </BorderPane.margin>
+                <font>
+                    <Font size="14.0"/>
+                </font>
+                <padding>
+                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+                </padding>
             </Label>
         </left>
         <right>
-            <Label fx:id="curar" text="CURAR" BorderPane.alignment="CENTER">
+            <Label fx:id="curar" onMouseClicked="#curarse" onMouseEntered="#pulsarCurar" onMouseExited="#despulsarCurar"
+                   style="-fx-background-color: #1CEE23; -fx-border-color: black; -fx-border-width: 1;" text="CURAR"
+                   BorderPane.alignment="CENTER">
                 <BorderPane.margin>
-                    <Insets right="15.0" />
+                    <Insets right="15.0"/>
                 </BorderPane.margin>
+                <font>
+                    <Font size="14.0"/>
+                </font>
+                <padding>
+                    <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+                </padding>
             </Label>
         </right>
     </BorderPane>
-    <BorderPane fx:id="ataques" layoutX="27.0" layoutY="263.0" prefHeight="75.0" prefWidth="255.0" style="-fx-background-color: gainsboro; -fx-border-color: black; -fx-border-width: 2;">
-        <left>
-            <Label fx:id="ataqueSeguro" onMouseClicked="#ataqueSeguro" style="-fx-background-color: yellow; -fx-border-color: black; -fx-border-width: 1;" text="ATAQUE SG" BorderPane.alignment="CENTER">
-                <BorderPane.margin>
-                    <Insets left="15.0" />
-                </BorderPane.margin>
-            </Label>
-        </left>
-        <center>
-            <Label style="-fx-background-color: orangered; -fx-border-color: black; -fx-border-width: 1;" text="ATAQUE ARIESGA" BorderPane.alignment="CENTER" />
-        </center>
-        <bottom>
-            <Label style="-fx-background-color: crimson; -fx-border-color: black; -fx-border-width: 1;" text="ATAQUE MUY ARRIESGADO" BorderPane.alignment="CENTER">
-                <BorderPane.margin>
-                    <Insets bottom="10.0" right="15.0" />
-                </BorderPane.margin>
-            </Label>
-        </bottom>
+    <BorderPane fx:id="ataques" layoutX="14.0" layoutY="250.0" prefHeight="97.0" prefWidth="398.0"
+                style="-fx-background-color: #38D1F0; -fx-border-color: #1A62D1; -fx-border-width: 8;">
         <right>
-            <Label fx:id="cancelar" onMouseClicked="#cancelar" text="CANCELAR" BorderPane.alignment="CENTER">
+            <VBox minWidth="-Infinity" BorderPane.alignment="CENTER">
+                <children>
+                    <Label fx:id="ataqueArriesgado" onMouseClicked="#ataqueArriesgado"
+                           onMouseEntered="#pulsarArriesgado" onMouseExited="#despulsarArriesgado"
+                           style="-fx-background-color: yellow; -fx-border-color: black; -fx-border-width: 1;"
+                           text="ATAQUE ARRIESGADO">
+                        <font>
+                            <Font name="Candara" size="12.0"/>
+                        </font>
+                        <VBox.margin>
+                            <Insets top="10.0"/>
+                        </VBox.margin>
+                        <padding>
+                            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+                        </padding>
+                    </Label>
+                    <Label fx:id="cancelar" onMouseClicked="#cancelar" onMouseEntered="#pulsarCancelar"
+                           onMouseExited="#despulsarCancelar"
+                           style="-fx-background-color: grey; -fx-border-color: black; -fx-border-width: 1;"
+                           text="CANCELAR">
+                        <font>
+                            <Font name="Candara Light" size="12.0"/>
+                        </font>
+                        <VBox.margin>
+                            <Insets top="15.0"/>
+                        </VBox.margin>
+                        <padding>
+                            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+                        </padding>
+                    </Label>
+                </children>
                 <BorderPane.margin>
-                    <Insets />
+                    <Insets right="25.0"/>
                 </BorderPane.margin>
-            </Label>
+            </VBox>
         </right>
+        <left>
+            <VBox prefHeight="81.0" prefWidth="197.0" BorderPane.alignment="CENTER">
+                <children>
+                    <Label fx:id="ataqueSeguro" onMouseClicked="#ataqueSeguro" onMouseEntered="#pulsarSeguro"
+                           onMouseExited="#despulsarSeguro"
+                           style="-fx-background-color: yellow; -fx-border-color: black; -fx-border-width: 1;"
+                           text="ATAQUE SEGURO">
+                        <VBox.margin>
+                            <Insets top="10.0"/>
+                        </VBox.margin>
+                        <padding>
+                            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+                        </padding>
+                    </Label>
+                    <Label fx:id="ataqueMuyArriesgado" onMouseClicked="#ataqueMuyArriesgado"
+                           onMouseEntered="#pulsarMuyArriesgado" onMouseExited="#despulsarMuyArriesgado"
+                           style="-fx-background-color: yellow; -fx-border-color: black; -fx-border-width: 1;"
+                           text="ATAQUE MUY ARRIESGADO">
+                        <VBox.margin>
+                            <Insets top="15.0"/>
+                        </VBox.margin>
+                        <padding>
+                            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0"/>
+                        </padding>
+                    </Label>
+                </children>
+                <BorderPane.margin>
+                    <Insets left="25.0"/>
+                </BorderPane.margin>
+            </VBox>
+        </left>
     </BorderPane>
-    <AnchorPane layoutX="129.0" layoutY="49.0" prefHeight="281.0" prefWidth="362.0" style="-fx-background-color: #f0ead6; -fx-border-color: #2f4f4f; -fx-border-width: 3;" visible="false">
-        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="81.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true" />
-        <Label layoutX="81.0" layoutY="49.0" text="Label" />
-        <Button layoutX="255.0" layoutY="219.0" mnemonicParsing="false" text="SALIR" />
-        <Button layoutX="53.0" layoutY="219.0" mnemonicParsing="false" text="VOLVER A LUCHAR" />
+    <AnchorPane layoutX="129.0" layoutY="49.0" prefHeight="281.0" prefWidth="362.0"
+                style="-fx-background-color: #f0ead6; -fx-border-color: #2f4f4f; -fx-border-width: 3;" visible="false">
+        <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="81.0" layoutY="66.0" pickOnBounds="true"
+                   preserveRatio="true"/>
+        <Label layoutX="81.0" layoutY="49.0" text="Label"/>
+        <Button layoutX="255.0" layoutY="219.0" mnemonicParsing="false" text="SALIR"/>
+        <Button layoutX="53.0" layoutY="219.0" mnemonicParsing="false" text="VOLVER A LUCHAR"/>
     </AnchorPane>
 </AnchorPane>
